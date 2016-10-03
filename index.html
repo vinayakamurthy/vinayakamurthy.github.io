@@ -1,1 +1,101 @@
-"hellowworlds" 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<script src="jquery-1.12.4.min.js"></script>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+    .navbar-header {
+        float: left;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        color:white;
+        font-size:100px;
+    }
+    
+    
+
+</style>
+<head>
+    
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"/>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+        <!--<a class="navbar-brand">
+        <img src="{!URLFOR($Resource.PGEImage)}" style= "margin-top: -25%;max-height: 70px;width: 100%;"/></a>-->
+        <a class="navbar-brand" style="font-size:50px;color:#72afba;" id="heading">PG&amp;E</a>
+         <a class="navbar-brand" style="font-size:30px;color:white;" id="heading">CASE DETAILS</a>
+         <a class="navbar-brand" style="font-size:20px;color:white;" id="heading1">(Enter details to create case to support agent.)</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+           <div class="row clearfix" style="padding-top: 60px">
+           
+              <div class="col-md-7 col-md-offset-3 column">
+                
+                    <form action="https://brillio--SFGroup.cs44.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                        <input type="hidden" name="orgid" value="00D7A000000CsjN"/>
+                        <input type="hidden" name="retURL" value="https://brillio--sfgroup.cs44.my.salesforce.com/500/o"/>
+                        
+                        <div class="form-group">
+                            <label for="name">Contact Name</label><input  id="name" class="form-control" maxlength="80" name="name" size="20" type="text" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label><input  id="email" class="form-control" maxlength="80" name="email" size="20" type="text" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label><input  id="phone" class="form-control" maxlength="40" name="phone" size="20" type="text" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label><input  id="subject" class="form-control" maxlength="80" name="subject" size="20" type="text" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label><textarea class="form-control" name="description"></textarea><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label><input class="form-control" id="company" maxlength="80" name="company" size="20" type="text" /><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type</label><select  id="type" class="form-control" name="type"><option value="">--None--</option><option value="Problem">Problem</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="Question">Question</option>
+                            </select><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status</label><select  id="status" class="form-control" name="status"><option value="">--None--</option><option value="On Hold">On Hold</option>
+                            <option value="Escalated">Escalated</option>
+                            <option value="Closed">Closed</option>
+                            <option value="New">New</option>
+                            </select><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Case Reason</label><select class="form-control" id="reason" name="reason"><option value="">--None--</option><option value="User didn&#39;t attend training">User didn&#39;t attend training</option>
+                            <option value="Complex functionality">Complex functionality</option>
+                            <option value="Existing problem">Existing problem</option>
+                            <option value="Instructions not clear">Instructions not clear</option>
+                            <option value="New problem">New problem</option>
+                            </select><br/>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Priority</label><select  id="priority" class="form-control" name="priority"><option value="">--None--</option><option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                            </select><br/>
+                        </div>
+                        
+                        <input type="submit" name="submit"/>
+                    </form>
+                </div>
+             </div> 
+        </div>
+        
+    </div>
+</body>
